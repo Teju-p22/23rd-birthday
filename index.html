@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, my Love!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff8f4;
+      --pink: #ffe6eb;
+      --peach: #ffe5cc;
+      --lavender: #f3e8ff;
+      --ink: #3c2a4d;
+      --accent: #ff6b81;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      font-family: 'Pacifico', cursive;
+      color: var(--ink);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .hearts {
+      font-size: 1.8rem;
+      color: var(--accent);
+      animation: float 1.5s ease-in-out infinite;
+    }
+    .click-me {
+      font-size: 1.3rem;
+      color: #b35755;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .main-doodle {
+      width: 200px;
+      cursor: pointer;
+      border: 4px dashed var(--accent);
+      border-radius: 20px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    .main-doodle:hover {
+      transform: scale(1.05);
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 5px var(--accent); }
+      to { box-shadow: 0 0 20px var(--accent); }
+    }
+
+    #menu {
+      display: none;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .menu-item {
+      font-size: 2rem;
+      padding: 1rem;
+      background: var(--peach);
+      border-radius: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ffc0cb;
+      transition: transform 0.3s ease;
+      animation: glow 1.8s ease-in-out infinite alternate;
+    }
+    .menu-item:hover {
+      transform: scale(1.1);
+    }
+
+    .content {
+      display: none;
+      margin-top: 2rem;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .content-box {
+      background: var(--pink);
+      border-radius: 15px;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      border: 2px dashed var(--accent);
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday, my love! <span class="hearts">❤❤❤</span></h1>
+  <div class="click-me">click me ↓</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Couple_doodle.svg/200px-Couple_doodle.svg.png" class="main-doodle" onclick="showMenu()" alt="Click to reveal menu"/>
+
+  <div id="menu">
+    <div class="menu-item" onclick="showContent('letter')">💌</div>
+    <div class="menu-item" onclick="showContent('reasons')">❤️</div>
+    <div class="menu-item" onclick="showContent('book')">📖</div>
+  </div>
+
+  <div id="letter" class="content">
+    <div class="content-box">
+      <p><strong style="font-family: cursive; font-size: 1.3em;">Happy Birthday Mogguda 😘</strong></p>
+      <p>Niku already telusu I’m not soo happy u spending ur birthday far from me, I wanted to create lots of memories for us to cherish...</p>
+      <p>Actually I planned to give 23 gifts... but broken wallet mission flop 🥺😂...</p>
+      <p>I love you sooooo much gundu boss 🤟</p>
+      <p>Once again... Happy Birthday Moggudu garu 😘</p>
+      <p>From ur Srimathi (ur cute cute 🐶)</p>
+    </div>
+  </div>
+
+  <div id="reasons" class="content">
+    <h2>23 Reasons Why I Love You</h2>
+    <div class="content-box">❤️ You make me feel seen</div>
+    <div class="content-box">❤️ You listen — truly listen</div>
+    <div class="content-box">❤️ You make sad moments into happy moments</div>
+    <div class="content-box">❤️ Your smile melts away even the worst days</div>
+    <div class="content-box">❤️ You never judge me, no matter how emotional I get</div>
+    <div class="content-box">❤️ You make effort in small ways</div>
+    <div class="content-box">❤️ You calm my chaos</div>
+    <div class="content-box">❤️ You never let me feel alone</div>
+    <div class="content-box">❤️ You're my best friend</div>
+    <div class="content-box">❤️ You support my goals</div>
+    <div class="content-box">❤️ Your hugs feel like home</div>
+    <div class="content-box">❤️ You challenge me to grow</div>
+    <div class="content-box">❤️ You forgive and never hold grudges</div>
+    <div class="content-box">❤️ You respect my independence</div>
+    <div class="content-box">❤️ You're proud of me</div>
+    <div class="content-box">❤️ Because you’re you — and that’s all I ever needed</div>
+    <div class="content-box">❤️ Your hug is my home</div>
+    <div class="content-box">❤️ Your love is the warmth I never experienced</div>
+    <div class="content-box">❤️ Your love made me the happiest person</div>
+  </div>
+
+  <div id="book" class="content">
+    <div class="content-box" style="background: var(--lavender);">
+      <h3>Things I Wish For Us</h3>
+      <ul>
+        <li>I wish we always laugh, even in tough times</li>
+        <li>I wish your hand always finds mine</li>
+        <li>I wish we never stop learning each other</li>
+        <li>I wish we take silly photos when we’re 80</li>
+        <li>I wish you always know how much you’re loved</li>
+      </ul>
+    </div>
+    <div class="content-box" style="background: var(--peach);">
+      <h3>If I Could Gift You Anything…</h3>
+      <ul>
+        <li>I’d gift you the loudest hug in the world</li>
+        <li>I’d gift you a day without a single worry</li>
+        <li>I’d gift you a bottle of my endless love</li>
+        <li>I’d gift you a moment where time pauses for us</li>
+        <li>I’d gift you 100 handwritten letters with a kiss on each</li>
+      </ul>
+    </div>
+    <div class="content-box" style="background: var(--pink);">
+      <h3>Tiny Promises</h3>
+      <ul>
+        <li>I promise to annoy you forever</li>
+        <li>I promise to laugh at your PJ-level jokes</li>
+        <li>I promise to always say “I love you”</li>
+        <li>I promise to make your bad days a little softer</li>
+        <li>I promise to never let you feel unloved</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showMenu() {
+      document.getElementById('menu').style.display = 'flex';
+    }
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(c => c.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
