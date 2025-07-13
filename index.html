@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, my love!</title>
+
+<!-- Hand-written font -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+
+<style>
+/* ------------- THEME & GLOBALS ------------- */
+:root{
+  --bg:#fffaf0;
+  --ink:#283549;
+  --accent:#ff6b81;
+  --glow:0 0 12px var(--accent);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Pacifico',cursive;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+/* Hide-show helper */
+section{display:none;min-height:100vh;padding:2.5rem 1rem}
+.show{display:block}
+
+/* ------------- LANDING ------------- */
+h1{font-size:2.8rem;margin-bottom:.25em}
+.hearts{color:var(--accent);font-size:1.6rem;animation:float 2s ease-in-out infinite}
+.click-me{color:#aa4a44;font-size:1.2rem;margin-bottom:1.2rem}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* Main couple doodle */
+.main-doodle{width:230px;cursor:pointer;filter:drop-shadow(var(--glow));transition:transform .35s}
+.main-doodle:hover{transform:scale(1.06)}
+
+/* ------------- MENU ------------- */
+#menu{display:none;flex-wrap:wrap;justify-content:center;gap:2.4rem;margin-top:2.6rem}
+.icon{width:90px;cursor:pointer;filter:drop-shadow(var(--glow));transition:transform .25s}
+.icon:hover{transform:scale(1.13)}
+
+/* ------------- CONTENT SECTIONS ------------- */
+.content{max-width:750px;margin:auto;line-height:1.7;padding-top:1rem}
+
+/* Letter hearts background */
+.letter-bg{position:relative}
+.letter-bg::after{
+  content:"❤❤❤❤❤";
+  position:absolute;left:50%;top:-25px;
+  font-size:1.6rem;color:var(--accent);
+  transform:translateX(-50%);opacity:.4;letter-spacing:.3rem;
+  animation:fadeHearts 4s infinite linear;
+}
+@keyframes fadeHearts{0%,100%{opacity:.4}50%{opacity:.1}}
+
+/* 23 reasons boxes */
+ul{list-style:none;padding:0;margin-top:1.4rem}
+li{
+  background:#fde7d7;
+  margin:.5rem 0;padding:.8rem 1rem;
+  border-radius:12px;
+  box-shadow:0 2px 4px rgba(0,0,0,.07);
+}
+li::before{content:"❤️ ";color:var(--accent)}
+
+/* Open-book subheadings */
+.chapter{font-size:1.6rem;margin:1.2rem 0 .6rem;color:var(--accent)}
+.small-heart{font-size:1.3rem;color:var(--accent)}
+
+/* Back button */
+button.back{
+  margin-top:1.6rem;
+  font-family:'Pacifico',cursive;
+  font-size:1.05rem;
+  padding:.45rem 1.3rem;
+  border:none;border-radius:10px;
+  background:var(--accent);color:#fff;
+  cursor:pointer;transition:opacity .25s
+}
+button.back:hover{opacity:.85}
+</style>
+</head>
+<body>
+
+<!-- ============ LANDING ============ -->
+<section id="landing" class="show">
+  <h1>Happy Birthday, my love! <span class="hearts">❤❤❤</span></h1>
+  <div class="click-me">click me ↓</div>
+
+  <!-- Main couple doodle (inline SVG) -->
+  <svg class="main-doodle" viewBox="0 0 120 140" onclick="openMenu()">
+    <path fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"
+      d="M30 40a12 12 0 1 1 24 0 12 12 0 1 1-24 0M66 40a12 12 0 1 1 24 0 12 12 0 1 1-24 0
+         M42 54v45M78 54v45M42 75h36M30 99l-8 28M90 99l8 28M42 99l12 12 12-12"/>
+  </svg>
+
+  <!-- MENU doodles -->
+  <div id="menu">
+    <!-- Envelope -->
+    <svg class="icon" viewBox="0 0 88 64" onclick="show('letter')">
+      <rect x="4" y="4" width="80" height="56" rx="6" ry="6"
+            fill="none" stroke="var(--ink)" stroke-width="4"/>
+      <polyline points="4,4 44,36 84,4" fill="none"
+                stroke="var(--ink)" stroke-width="4"/>
+    </svg>
+
+    <!-- 23 reasons sheet -->
+    <svg class="icon" viewBox="0 0 88 88" onclick="show('reasons')">
+      <rect x="14" y="6" width="60" height="76" rx="7" ry="7"
+            fill="none" stroke="var(--ink)" stroke-width="4"/>
+      <text x="44" y="52" text-anchor="middle"
+            font-size="36" font-family="Arial" fill="var(--ink)" font-weight="700">23</text>
+    </svg>
+
+    <!-- Open book -->
+    <svg class="icon" viewBox="0 0 100 70" onclick="show('openbook')">
+      <path d="M10 10h35v50H10m45-50h35v50H55" fill="none"
+            stroke="var(--ink)" stroke-width="4"/>
+      <line x1="45" y1="10" x2="55" y2="60" stroke="var(--ink)" stroke-width="4"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ LETTER SECTION ============ -->
+<section id="letter">
+  <h2 style="font-size:2.1rem;color:var(--accent);margin-bottom:.5rem;">Happy Birthday&nbsp;Mogguda 😘</h2>
+  <div class="content letter-bg" style="font-size:1.15rem;">
+    <p>niku already telusu I’m not soo happy u spending ur birthday far from me.</p>
+    <p>I wanted to create lots of memories for us to cherish. As I wasn’t earning yet I couldn’t give anything fancy.  
+       I actually planned <b>23 gifts</b> for your 23rd birthday but my broken wallet made that mission flop 🥺😂.</p>
+    <p>You can’t even imagine how much I love u, gundu boss 🤟.  
+       U might have fallen first but I fell harder. Love you sooooooooo much, mogguda❤️!</p>
+    <p>Thanks for always being there for me. I know, I know – nenu ivi anni eppudu chepte, but enti saarlu gurthu cheskuna thakuve 😅</p>
+    <p>Nii migitha birthdays anni naatho undipovali ani, inka inka memories create cheskovali ani koruthu...</p>
+    <p style="margin-top:1rem;">Once again, <b>Happy Birthday&nbsp;moggudu garu 😘!</b></p>
+    <p style="margin-top:2rem;">From ur srimathi<br>(ur cute cute 🐶)</p>
+    <button class="back" onclick="back()">← back</button>
+  </div>
+</section>
+
+<!-- ============ 23 REASONS SECTION ============ -->
+<section id="reasons">
+  <h2 style="font-size:2rem;color:var(--accent);margin-bottom:.5rem;">23 Reasons Why I Love You</h2>
+  <div class="content" style="font-size:1.05rem;">
+    <ul>
+      <li>Your love makes me the happiest person</li>
+      <li>You truly listen — and that makes me feel heard</li>
+      <li>You turn my sad moments into memories I smile at</li>
+      <li>Your smile melts away even the worst days</li>
+      <li>You never judge me, no matter how emotional or messy I get</li>
+      <li>You put effort into even the tiniest things</li>
+      <li>You calm my chaos — mentally, emotionally &amp; spiritually</li>
+      <li>You’re there for me, even in silence</li>
+      <li>You’re not just my partner, you’re my best friend</li>
+      <li>You support my dreams without ever trying to change me</li>
+      <li>Your hug is my safest home</li>
+      <li>You challenge me to grow and become better</li>
+      <li>You forgive — and you never hold grudges</li>
+      <li>You respect my independence but remind me I’m never alone</li>
+      <li>You’re proud of me, and you always show it</li>
+      <li>Because you’re <em>you</em> — and that’s all I ever needed</li>
+      <li>You make me feel safe in a way no one else can</li>
+      <li>Your hug feels like warmth I never experienced before</li>
+      <li>Your presence makes me feel deeply loved</li>
+      <li>You make ordinary moments feel magical</li>
+      <li>Your patience makes me believe in gentle love</li>
+      <li>You understand me without words</li>
+      <li>With you, I finally know what love is supposed to feel like</li>
+    </ul>
+    <button class="back" onclick="back()">← back</button>
+  </div>
+</section>
+
+<!-- ============ OPEN BOOK SECTION ============ -->
+<section id="openbook">
+  <h2 style="font-size:2rem;color:var(--accent);margin-bottom:.3rem;">From My Heart to Yours</h2>
+  <div class="content" style="font-size:1.08rem;">
+    <!-- Things I Wish For Us -->
+    <div class="chapter">Things I Wish For Us <span class="small-heart">✨</span></div>
+    <ul>
+      <li>I wish we always laugh, even in tough times</li>
+      <li>I wish your hand always finds mine</li>
+      <li>I wish we never stop learning each other</li>
+      <li>I wish we take silly photos when we’re 80</li>
+      <li>I wish you always know how much you’re loved</li>
+    </ul>
+
+    <!-- If I Could Gift You Anything -->
+    <div class="chapter" style="margin-top:1.4rem;">If I Could Gift You Anything… <span class="small-heart">🎁</span></div>
+    <ul>
+      <li>I’d gift you the loudest hug in the world</li>
+      <li>I’d gift you a day without a single worry</li>
+      <li>I’d gift you a bottle of my endless love</li>
+      <li>I’d gift you a moment where time pauses for us</li>
+      <li>I’d gift you 100 handwritten letters with a kiss on each</li>
+    </ul>
+
+    <!-- 10 Tiny Promises -->
+    <div class="chapter" style="margin-top:1.4rem;">10 Tiny Promises <span class="small-heart">🫶</span></div>
+    <ul>
+      <li>I promise to annoy you forever</li>
+      <li>I promise to laugh at your PJ-level jokes</li>
+      <li>I promise to always say “I love you”</li>
+      <li>I promise to make your bad days a little softer</li>
+      <li>I promise to never let you feel unloved</li>
+    </ul>
+
+    <button class="back" onclick="back()">← back</button>
+  </div>
+</section>
+
+<!-- ============ JS ============ -->
+<script>
+function openMenu(){
+  document.getElementById('menu').style.display='flex';
+}
+/* simple router */
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+}
+function back(){ show('landing'); }
+</script>
+</body>
+</html>
