@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fffaf0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-top: 40px;
+      color: #ff69b4;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4;
+      }
+      to {
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493;
+      }
+    }
+    .icon-button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+      margin: 20px;
+    }
+    .icon-button:hover {
+      transform: scale(1.1);
+    }
+    .glow {
+      border: 4px solid transparent;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 0 20px #ff69b4;
+      display: inline-block;
+    }
+    .menu, .section, .back-button {
+      display: none;
+    }
+    .visible {
+      display: block;
+    }
+    .content-box {
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #ffc0cb;
+    }
+    .emoji-list {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+    }
+    .emoji-list li::before {
+      content: "💖 ";
+    }
+    .back-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    img.icon {
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="main-screen">
+    <h1>Happy Birthday my love! ❤️</h1>
+    <button class="icon-button glow" onclick="showMenu()">
+      <img src="main-couple.jpeg" class="icon" alt="Main Couple">
+    </button>
+  </div>
+
+  <div id="menu" class="menu">
+    <button class="icon-button glow" onclick="showSection('letter')">
+      <img src="envelope.jpeg" class="icon" alt="Letter">
+    </button>
+    <button class="icon-button glow" onclick="showSection('reasons')">
+      <img src="23-reasons.jpeg" class="icon" alt="23 Reasons">
+    </button>
+    <button class="icon-button glow" onclick="showSection('book')">
+      <img src="open-book.jpeg" class="icon" alt="Open Book">
+    </button>
+  </div>
+
+  <div id="letter" class="section content-box">
+    <p style="font-family: 'Lucida Handwriting', cursive; font-size: 1.3em; color: #ff1493;">
+      Sooo first I’ll wish you😅: <span style="font-family: fantasy; font-size: 1.5em;">Happy Birthday Mogguda 😘</span><br><br>
+      Niku already telusu I’m not soo happy u spending ur birthday far from me, I wanted to create lots of memories for us to cherish. As I wasn’t having any earnings for now I couldn’t give anything fancy or anything u need. Actually I had planned to give 23 gifts for your 23rd birthday but I couldn’t accomplish properly because of my broken wallet which left this mission flop 🥺😂.<br><br>
+      You can’t even imagine how much I love u: gundu boss 🤟, u might have fallen first but I fell harder, love you sooooooooo much mogguda❤️! Thanks for always being there for me, I know I know ivi ani nenu eppudu chepeve but eni saarlu gurthu cheskuna thakuve. Inka niii migitha birthday’s ani naatho undipovali ani, inka inka memories create cheskovali ani kooruthu once again wish u happy birthday moggudu garu 😘!<br><br>
+      From ur srimathi (Ur cute cute 🐶)
+    </p>
+    <button class="back-button" onclick="goHome()">Back to Home</button>
+  </div>
+
+  <div id="reasons" class="section content-box">
+    <h2 style="color: #ff1493;">23 Reasons Why I Love You</h2>
+    <ul class="emoji-list">
+      <li>You make me feel safe and loved always</li>
+      <li>Your silly jokes make my worst days better</li>
+      <li>Even your anger looks cute to me</li>
+      <li>You believe in me even when I don’t</li>
+      <li>Your hugs are my favourite place</li>
+      <li>I love our deep conversations</li>
+      <li>You accept me exactly the way I am</li>
+      <li>You're my best friend and my love</li>
+      <li>I feel like a queen when I’m with you</li>
+      <li>You remember tiny details about me</li>
+      <li>You respect my dreams</li>
+      <li>You make me laugh like crazy</li>
+      <li>You bring out the best in me</li>
+      <li>Even silence with you is comforting</li>
+      <li>You’re always my biggest supporter</li>
+      <li>Your eyes speak love without a word</li>
+      <li>You love my imperfections</li>
+      <li>You protect me like your little world</li>
+      <li>You’re the person I imagined in dreams</li>
+      <li>You still give butterflies</li>
+      <li>I just love you endlessly without logic</li>
+      <li>You’re mine, and I’m yours</li>
+      <li>Because you’re you... and that’s enough ❤️</li>
+    </ul>
+    <button class="back-button" onclick="goHome()">Back to Home</button>
+  </div>
+
+  <div id="book" class="section content-box">
+    <h2 style="color: #ff1493;">Tiny Promises & More</h2>
+    <h3>Things I Wish For Us</h3>
+    <ul class="emoji-list">
+      <li>I wish we always laugh, even in tough times</li>
+      <li>I wish your hand always finds mine</li>
+      <li>I wish we never stop learning each other</li>
+      <li>I wish we take silly photos when we’re 80</li>
+      <li>I wish you always know how much you’re loved</li>
+    </ul>
+    <h3>If I Could Gift You Anything</h3>
+    <ul class="emoji-list">
+      <li>I’d gift you the loudest hug in the world</li>
+      <li>I’d gift you a day without a single worry</li>
+      <li>I’d gift you a bottle of my endless love</li>
+      <li>I’d gift you a moment where time pauses for us</li>
+      <li>I’d gift you 100 handwritten letters with a kiss on each</li>
+    </ul>
+    <h3>Tiny Promises</h3>
+    <ul class="emoji-list">
+      <li>I promise to annoy you forever</li>
+      <li>I promise to laugh at your PJ-level jokes</li>
+      <li>I promise to always say “I love you”</li>
+      <li>I promise to make your bad days a little softer</li>
+      <li>I promise to never let you feel unloved</li>
+    </ul>
+    <button class="back-button" onclick="goHome()">Back to Home</button>
+  </div>
+
+  <script>
+    function showMenu() {
+      document.getElementById('main-screen').style.display = 'none';
+      document.getElementById('menu').style.display = 'block';
+    }
+    function showSection(sectionId) {
+      document.getElementById('menu').style.display = 'none';
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+    function goHome() {
+      document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+      document.getElementById('menu').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
